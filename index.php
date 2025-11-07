@@ -10,8 +10,13 @@
 </head>
 
 <body>
+
     <!-- SECCION DEL HEADER -->
     <header>
+        <div class="language-switch">
+            <a href="index.php"><img src="./img/spain.png" alt="Español" title="Español"></a>
+            <a href="index-en.php"><img src="./img/great_bratain.png" alt="English" title="English"></a>
+        </div>
         <div class="header-container">
             <div class="bg-section">
                 <img src="./img/header.b.w.png" alt="Foto Andrés y María Jesús, donde se ve el anillo de compromiso">
@@ -24,6 +29,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- SECCION DETALLES DEL EVENTO -->
     <section class="detalles-section">
@@ -191,6 +197,10 @@
     <!-- FINAL FOOTER -->
 
     <script src="JS/script.js"></script>
+    <div style="text-align:center; margin: 10px 0;">
+        <a href="index.php" class="lang-switch">Español 🇪🇸</a> |
+        <a href="index-en.php" class="lang-switch">English 🇬🇧</a>
+    </div>
 </body>
 
 </html>
