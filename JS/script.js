@@ -86,3 +86,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(frase);
 });
+
+// BOTÓN DEL FORMULARIO (REVISADO FINAL)
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("rsvpForm");
+    const alertBox = document.getElementById("thankYouMessage");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch("guardar_rsvp.php", {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await response.text();
+            console.log(result); // <-- mira esto en la consola de tu navegador
+
+            if (result.includes("success")) {
+                alertBox.classList.add("show");
+                form.reset();
+                setTimeout(() => alertBox.classList.remove("show"), 2500);
+                // Mostrar mensaje de agradecimiento animado
+                const thankYou = document.getElementById("thankYouMessage");
+                thankYou.style.display = "block";
+                thankYou.style.animation = "fadeInOut 4s ease forwards";
+                setTimeout(() => {
+                    thankYou.style.display = "none";
+                }, 4000);
+            } else {
+                alert("Ocurrió un error al guardar tu confirmación.");
+                console.log(result);
+            }
+        } catch (error) {
+            console.error("Error en el envío:", error);
+            alert("Error de conexión con el servidor.");
+        }
+    });
+});
+
+
+//SECCION DE REGALOS
+const verMasBtn = document.getElementById('verMasBtn');
+const regalosDetalle = document.getElementById('regalosDetalle');
+
+verMasBtn.addEventListener('click', () => {
+    if (regalosDetalle.style.display === "block") {
+        regalosDetalle.style.display = "none";
+        verMasBtn.textContent = "Ver más 🎁";
+    } else {
+        regalosDetalle.style.display = "block";
+        verMasBtn.textContent = "Ver menos ✨";
+    }
+});

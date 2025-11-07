@@ -78,14 +78,14 @@ body {
     .title-section h1 {
         font-family: var(--manrope);
         letter-spacing: .5rem;
-        font-size: 2rem;
-        font-weight: 400;
-        margin-top: 2rem;
-        color: var(--blanco1);
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-top: 8rem;
+        color: #fff;
     }
 
     .title-section img {
-        width: 100px;
+        width: 50px;
         height: auto;
         display: flex;
         justify-content: center;
@@ -93,7 +93,7 @@ body {
     }
 
     .title-section h2 {
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 400;
         font-family: var(--luxurius);
         color: var(--blanco1);
@@ -125,43 +125,30 @@ body {
         font-family: var(--manrope);
         letter-spacing: .2rem;
         font-weight: 400;
-        font-size: 1.3rem;
+        font-size: 13px;
     }
 
     .info-section h3 {
         text-transform: uppercase;
         letter-spacing: .2rem;
         font-family: var(--manrope);
-        font-size: 1.4rem;
+        font-size: 13px;
         font-weight: 400;
     }
 
     .info-section p {
         font-family: var(--manrope);
-        font-size: 1.4rem;
+        font-size: 13px;
         text-transform: uppercase;
         letter-spacing: .2rem;
     }
 
     .info-section img {
-        width: 100px;
+        width: 80px;
         filter: brightness(0.95);
-        animation: aparecer 1.2s ease-out forwards;
+        animation: aparecer-izquierda 1.2s ease-out forwards;
     }
 
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-            transform: scale(0.7);
-            filter: brightness(0.5);
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1);
-            filter: brightness(1);
-        }
-    }
 
     /* BOTON */
     .ubicacion button {
@@ -210,7 +197,7 @@ body {
 
     .deadline-label {
         color: var(--blanco1);
-        font-size: 20px;
+        font-size: 17px;
         font-family: var(--manrope);
         letter-spacing: .2rem;
         margin-bottom: 5px;
@@ -257,7 +244,7 @@ body {
     }
 
     .countdown-timer {
-        font-size: 14px;
+        font-size: 12px;
         padding: 12px;
     }
 
@@ -275,7 +262,7 @@ body {
     }
 
     .countdown-timer ul li span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .countdown-timer-ul .deadline-label {
@@ -283,7 +270,7 @@ body {
         margin-bottom: 4px;
     }
 
-    /* GALLERIA */
+    /* GALERIA */
     .mobile-gallery {
         width: 100%;
         padding: 10px;
@@ -295,8 +282,9 @@ body {
     .mobile-gallery h3 {
         margin-bottom: 2rem;
         font-family: var(--luxurius);
-        font-size: 50px;
+        font-size: 30px;
         font-weight: 400;
+        letter-spacing: .1rem;
     }
 
     .mobile-gallery h4 {
@@ -414,7 +402,7 @@ body {
 
     .dress-code p {
         font-family: var(--manrope);
-        font-size: 1rem;
+        font-size: 13px;
         letter-spacing: .1rem;
         max-width: 500px;
     }
@@ -516,7 +504,7 @@ body {
     .frase-container {
         position: relative;
         margin: 7rem auto 0 auto;
-        height: 40vh;
+        height: 35vh;
         border: 2px solid #A23B12;
         display: flex;
         flex-direction: column;
@@ -549,7 +537,7 @@ body {
     /* ===== TEXTO ===== */
     .frase-container p {
         font-family: var(--manrope);
-        font-size: 1.2rem;
+        font-size: 14px;
         color: var(--blanco1);
         line-height: 1.5;
         max-width: 90%;
@@ -633,7 +621,7 @@ body {
     /* Texto */
     .regalos p {
         font-family: var(--manrope);
-        font-size: 1.2rem;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.7;
         max-width: 550px;
@@ -641,8 +629,11 @@ body {
         color: var(--blanco1);
     }
 
+    /* Animación para dinero flotante */
+    .money {
+        animation: floatMoney 4s ease-in-out infinite;
+    }
 
-    /* ======= ANIMACIÓN ======= */
     @keyframes bounceGift {
 
         0%,
@@ -655,10 +646,6 @@ body {
         }
     }
 
-    .money {
-        animation: floatMoney 4s ease-in-out infinite;
-    }
-
     @keyframes floatMoney {
 
         0%,
@@ -669,6 +656,43 @@ body {
         50% {
             transform: translateY(-6px) rotate(3deg);
         }
+    }
+
+    /* ====== NUEVO: Contenedor oculto de detalles ====== */
+    .regalos-detalle {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: var(--terracota-fuerte) 2px solid;
+        background-color: var(--terracota-claro);
+        border-radius: 8px;
+        max-width: 400px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* ====== Botón ver más ====== */
+    .ver-mas-btn {
+        margin-top: 1rem;
+        background-color: #b4532a;
+        color: var(--beige-claro);
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        border: var(--terracota-fuerte) 2px solid;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: var(--manrope);
+        font-size: 13px;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        transition: background 0.3s ease, transform 0.2s ease;
+        z-index: 1;
+    }
+
+    .ver-mas-btn:hover {
+        background-color: #a34724;
+        transform: scale(1.05);
     }
 
 
@@ -684,15 +708,15 @@ body {
 
     /* Título cursivo romántico */
     .rsvp-title {
-        font-family: "Great Vibes";
-        font-size: 1.8rem;
+        font-family: var(--luxurius);
+        font-size: 12px;
         margin-bottom: 10px;
         color: #fff;
     }
 
     /* Texto descriptivo */
     .rsvp-title {
-        font-size: 2.7rem;
+        font-size: 30px;
         font-family: var(--luxurius);
         font-weight: 400;
         color: var(--blanco2);
@@ -701,7 +725,7 @@ body {
 
     .rsvp-text {
         letter-spacing: .05rem;
-        font-size: 1.2rem;
+        font-size: 14px;
         font-family: var(--manrope);
         color: var(--blanco2);
         margin-bottom: 20px;
@@ -719,7 +743,7 @@ body {
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: 1rem;
+        font-size: 13px;
         font-family: var(--manrope);
         font-weight: 500;
         color: var(--blanco1);
@@ -767,7 +791,7 @@ body {
         border-radius: 8px;
         background-color: #f8f6f4;
         color: #3a3a3a;
-        font-size: 0.9rem;
+        font-size: 13px;
         margin-bottom: 10px;
         box-sizing: border-box;
     }
@@ -775,7 +799,7 @@ body {
     .input-field::placeholder {
         color: var(--gris);
         font-family: var(--manrope);
-        font-size: 1rem;
+        font-size: 12px;
     }
 
     /* Campo pequeño para cantidad */
@@ -797,27 +821,134 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 10px;
         width: 70%;
         background-color: #b4532a;
         color: var(--blanco2);
         border: none;
-        padding: 5px 0;
+        padding: 10px 0;
         margin-left: 4rem;
         border-radius: 8px;
-        font-size: 1rem;
+        font-size: 14px;
         font-weight: 500;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
         transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .submit-btn img {
-        width: 30px;
+        width: 24px;
     }
 
-    .submit-btn:hover {
-        background-color: #8f3e1f;
-        transform: scale(1.02);
+    /* Onda al hacer clic */
+    .submit-btn::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
     }
+
+    .submit-btn:active::after {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+        transition: 0s;
+    }
+
+    /* Rebote suave */
+    .submit-btn:active {
+        transform: scale(0.95);
+        background-color: #a34724;
+    }
+
+    /* ===== ALERTA ===== */
+    .form-alert {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background-color: #b4532a;
+        color: var(--blanco2);
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-family: var(--manrope);
+        font-weight: 500;
+        font-size: 14px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        z-index: 9999;
+    }
+
+    .form-alert.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Pequeño brillo de entrada */
+    @keyframes pop-in {
+        0% {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .form-alert.show {
+        animation: pop-in 0.4s ease;
+    }
+
+    /* ===== MENSAJE DE AGRADECIMIENTO ===== */
+    .thank-you {
+        display: none;
+        opacity: 0;
+        margin-top: 1rem;
+        font-size: 13px;
+        font-family: var(--manrope);
+        color: #fff8f4;
+        background-color: rgba(180, 83, 42, 0.9);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        text-align: center;
+        line-height: 1.5;
+        max-width: 400px;
+        animation: fadeInOut 4s ease forwards;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        15% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        85% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    }
+
+
 
     /* SECCION FOOTER */
     footer {
@@ -840,7 +971,7 @@ body {
 
     .footer-content h3 {
         font-family: var(--manrope);
-        font-size: var(1.2rem);
+        font-size: 14px;
         font-weight: 400;
         letter-spacing: .1rem;
         text-transform: uppercase;
@@ -849,7 +980,7 @@ body {
 
     .footer-content h4 {
         font-family: var(--luxurius);
-        font-size: 2.5rem;
+        font-size: 25px;
         font-weight: 400;
         letter-spacing: .1rem;
         color: var(--blanco2);
@@ -857,7 +988,7 @@ body {
 
     .credits p {
         font-family: var(--manrope);
-        font-size: 1rem;
+        font-size: 12px;
         font-weight: 400;
         letter-spacing: .1rem;
         color: var(--gris);
