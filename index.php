@@ -34,7 +34,7 @@
     <!-- SECCION DETALLES DEL EVENTO -->
     <section class="detalles-section">
         <div class="detalles-container">
-            <h2>Será un honor contar con tu presencia <br> en este día tan especial.</h2>
+            <h2>Será un honor contar con su presencia <br> en este día tan especial.</h2>
             <div class="hojas"></div>
             <div class="info-section">
                 <div class="fecha">
@@ -50,15 +50,15 @@
                 <div class="fiesta">
                     <img src="./img/cheers.gray.png"
                         alt="Icono de copas juntas con corazon en el centro en color blanco">
-                    <h3>Que empiece la celebración</h3>
+                    <h3>¡Que empiece la celebración!</h3>
                     <p>4:30 PM</p>
                 </div>
                 <div class="ubicacion">
                     <img src="./img/location.gray.png" alt="Icono de ubicacion en colo blanco">
-                    <h3>BAR Y RESTAURANTE MATA DE CAÑA</h3>
+                    <h3>Bar y restaurante Mata de Caña</h3>
                     <button class="btn"><a
                             href="https://www.google.com/maps/place/Bar+y+Restaurante+Mata+de+Ca%C3%B1a+Tarraz%C3%BA/@9.6217811,-84.0611205,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa111a9583f542b:0x40f55306233f06df!8m2!3d9.6217811!4d-84.0585402!16s%2Fg%2F11jpctjc_0?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank">VER UBICACIÓN</a></button>
+                            target="_blank">Ver Ubicación</a></button>
                 </div>
             </div>
         </div>
@@ -89,12 +89,12 @@
         <h3>Nuestros Momentos</h3>
         <h3>Toca las imágenes para ver cómo cambian de color.</h3>
         <div class="gallery-container">
-            <img src="./img/gallery.jpg" alt="Foto 1">
-            <img src="./img/gallery2.jpg" alt="Foto 2">
-            <img src="./img/gallery3.jpg" alt="Foto 3">
-            <img src="./img/gallery4.jpg" alt="Foto 4">
-            <img src="./img/gallery5.jpg" alt="Foto 5">
-            <img src="./img/gallery6.jpg" alt="Foto 6">
+            <img src="img/gallery.jpg" alt="Foto 1">
+            <img src="img/gallery2.jpg" alt="Foto 2">
+            <img src="img/gallery3.jpg" alt="Foto 3">
+            <img src="img/gallery4.jpg" alt="Foto 4">
+            <img src="img/gallery5.jpg" alt="Foto 5">
+            <img src="img/gallery6.jpg" alt="Foto 6">
         </div>
         <h4>Cada fotografía, un pedacito de nuestra historia.</h4>
 
@@ -108,7 +108,7 @@
             <h3>Dress Code: Semi-Formal</h3>
             <img src="./img/dresscode.gray.png" alt="Icono de traje y vestido formal en color blanco">
             <p>Nuestra paleta de boda será en tonos terracota, naranja y beige.
-                Te pedimos evitar usar estos colores para mantener la armonía del evento.</p>
+                Les pedimos evitar usar estos colores para mantener la armonía del evento.</p>
         </div>
 
         <div class="palette">
@@ -134,20 +134,42 @@
                 1 Corintios 13: 4-6.</p>
             <img src="./img/quatition.png" alt="Signo de cerrar comillas" class="cerrar">
         </div>
-        <!-- <div class="separador"><img src="./img/corazon.png" alt="Icono de corazon dibujado en color blanco"></div> -->
     </section>
     <!-- FIN SECCION FRASE -->
 
+    
+    <!-- INICIO SECCION REGALOS -->
+    <section class="regalos">
+        <img src="./img/present.png" alt="Icono de caja de regalo en color terracota" class="gift">
+        <p>Nuestro mayor regalo será verte celebrar con nosotros. Si deseas acompañarlo con un detalle:</p>
+        <!-- Contenedor oculto con información adicional -->
+        <div class="regalos-detalle" id="regalosDetalle">
+            <p><strong>También puedes entregarnos tu regalo en efectivo en un sobre el día del evento.</strong></p>
+            <p>Tu apoyo nos ayudará a construir nuestro hogar, ¡y lo valoramos con todo el corazón!</p>
+        </div>
+
+        <button class="ver-mas-btn" id="verMasBtn">VER MÁS</button>
+
+        <img src="./img/money.png" alt="Icono de billete y moneda en color terracota" class="money">
+    </section>
+
+    <div class="separador">
+        <img src="./img/corazon.png" alt="Icono de corazón dibujado en color blanco">
+    </div>
+    <!-- FIN SECCION REGALOS -->
 
 
     <!-- INICIO SECCION FORMULARIO -->
     <section class="rsvp-section">
-        <h2 class="rsvp-title">Estaremos Felices De Verte</h2>
+        <h2 class="rsvp-title">Estaremos Felices De Verlo(s)</h2>
         <p class="rsvp-text">
-            Completa el siguiente formulario y háznos saber si podrás acompañarnos.
+            Complete el siguiente formulario y háganos saber si puede acompañarnos.
         </p>
 
-        <div class="rsvp-options">
+        
+
+        <form class="rsvp-form" id="rsvpForm" action="guardar_rsvp.php" method="POST">
+            <div class="rsvp-options">
             <label class="option">
                 <input type="radio" name="attendance" value="si">
                 <span class="custom-radio terracota"></span>
@@ -160,8 +182,6 @@
                 No Podré Asistir
             </label>
         </div>
-
-        <form class="rsvp-form" id="rsvpForm" action="guardar_rsvp.php" method="POST">
             <input type="number" name="cantidad" class="input-field small" placeholder="Cantidad" min="1" max="10" required>
             <input type="text" name="nombre" class="input-field" placeholder="Nombre completo o familia" required>
             <input type="text" name="apellido" class="input-field" placeholder="Apellidos o familia" required>
@@ -175,7 +195,7 @@
             <div class="form-alert" id="formAlert">¡Mensaje enviado correctamente!</div>
             <!-- ===== MENSAJE DE AGRADECIMIENTO ===== -->
             <div class="thank-you" id="thankYouMessage">
-                💌 Gracias por confirmar, nos emociona contar contigo en este día tan especial.
+                Gracias por confirmar, nos emociona contar con usted(es) en este día tan especial.
             </div>
         </form>
 

@@ -11,9 +11,9 @@
 
 <body>
     <div class="language-switch">
-            <a href="index.php"><img src="./img/spain.png" alt="Español" title="Español"></a>
-            <a href="index-en.php"><img src="./img/great_bratain.png" alt="English" title="English"></a>
-        </div>
+        <a href="index.php"><img src="./img/spain.png" alt="Español" title="Español"></a>
+        <a href="index-en.php"><img src="./img/great_bratain.png" alt="English" title="English"></a>
+    </div>
     <!-- HEADER SECTION -->
     <header>
         <div class="header-container">
@@ -83,12 +83,12 @@
         <h3>Our Moments</h3>
         <h3>Tap on the images to see them come to life.</h3>
         <div class="gallery-container">
-            <img src="./img/gallery.jpg" alt="Photo 1">
-            <img src="./img/gallery2.jpg" alt="Photo 2">
-            <img src="./img/gallery3.jpg" alt="Photo 3">
-            <img src="./img/gallery4.jpg" alt="Photo 4">
-            <img src="./img/gallery5.jpg" alt="Photo 5">
-            <img src="./img/gallery6.jpg" alt="Photo 6">
+            <img src="img/gallery.jpg" alt="Photo 1">
+            <img src="img/gallery2.jpg" alt="Photo 2">
+            <img src="img/gallery3.jpg" alt="Photo 3">
+            <img src="img/gallery4.jpg" alt="Photo 4">
+            <img src="img/gallery5.jpg" alt="Photo 5">
+            <img src="img/gallery6.jpg" alt="Photo 6">
         </div>
         <h4>Each picture, a piece of our love story.</h4>
 
@@ -128,6 +128,28 @@
     </section>
     <!-- END VERSE SECTION -->
 
+    <!-- START GIFTS SECTION -->
+    <section class="regalos">
+        <img src="./img/present.png" alt="Terracotta-colored gift box icon" class="gift">
+
+        <p>Our greatest gift will be having you celebrate with us. If you’d like to accompany it with a gesture, you can do so through:</p>
+
+        <!-- Hidden container with additional information -->
+        <div class="regalos-detalle" id="regalosDetalle">
+            <p><strong>If it’s easier for you, feel free to bring your cash gift in an envelope on the wedding day.</p>
+            <p>Your support will help us build our home — and we’re deeply grateful for it!</p>
+        </div>
+
+        <button class="ver-mas-btn" id="verMasBtn">See more</button>
+
+        <img src="./img/money.png" alt="Terracotta-colored bill and coin icon" class="money">
+    </section>
+
+    <div class="separador">
+        <img src="./img/corazon.png" alt="White hand-drawn heart icon">
+    </div>
+    <!-- END GIFTS SECTION -->
+
     <!-- RSVP SECTION -->
     <section class="rsvp-section">
         <h2 class="rsvp-title">We’ll Be Delighted to See You</h2>
@@ -163,7 +185,7 @@
             <div class="form-alert" id="formAlert">Your message was sent successfully!</div>
             <!-- THANK YOU MESSAGE -->
             <div class="thank-you" id="thankYouMessage">
-                💌 Thank you for confirming — we can’t wait to celebrate this special day with you!
+                Thank you for confirming — we can’t wait to celebrate this special day with you!
             </div>
         </form>
     </section>
